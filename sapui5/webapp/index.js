@@ -1,19 +1,13 @@
 sap.ui.define([
-    "sap/m/Button",
-    "sap/m/MessageToast"
+    "sap/ui/core/mvc/XMLView"
 ], 
 /**
- * 
- * @param {typeOf sap.m.Button} Button 
- * @param {typeOf sap.m.MessageToast} MessageToast 
+ * @param {typeOf sap.ui.core.mvc.XMLView} XMLView  
  */
-function(Button, MessageToast) {
- 
-    new Button({
-        text:"Ready", 
-        press: function(){
-            MessageToast.show("Hello World");
-        } 
-    }).placeAt("content");
-    
+function(XMLView) {
+   
+	XMLView.create({viewName: "logaligroup.com.sapui5.view.App"}).then(function (oView) {
+		oView.placeAt("content");
+	});
+
 });

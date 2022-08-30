@@ -1,0 +1,11 @@
+<mvc:View 
+    controllerName="logaligroup.com.sapui5.controller.App"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <App id="idApp">
+        <Page id="Page" title="My first App">
+            <Button id="idButton1" text="Press button" press=".onPress" type="Emphasized" class="sapUiSmallMargin"/> 
+        </Page>
+    </App>
+</mvc:View>
