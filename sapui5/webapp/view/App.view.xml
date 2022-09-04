@@ -5,7 +5,14 @@
 	xmlns="sap.m">
     <App id="idApp">
         <Page id="Page" title="My first App">
-            <Button id="idButton1" text="Press button" press=".onPress" type="Emphasized" class="sapUiSmallMargin"/> 
+            <Button id="idButton1" 
+                    text="{i18n>pressButton}" 
+                    press=".onPress"  /> 
+            <Input id="input" 
+                    value="{oDataModel>/recipient/name}"
+                    width="60%"
+                    valueLiveUpdate="true" />
+            <Text id="text" text="Hello {oDataModel>/recipient/name}"/> 
         </Page>
     </App>
 </mvc:View>

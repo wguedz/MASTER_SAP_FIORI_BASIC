@@ -87,7 +87,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "logaligroup.com.sapui5.view",
+        "viewPath": "logaligroup.com.sapui5.view.App",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
@@ -95,10 +95,8 @@
       "routes": [
         {
           "name": "RouteApp",
-          "pattern": ":?query:",
-          "target": [
-            "TargetApp"
-          ]
+          "pattern": "RouteApp",
+          "target": ["TargetApp"]
         }
       ],
       "targets": {
