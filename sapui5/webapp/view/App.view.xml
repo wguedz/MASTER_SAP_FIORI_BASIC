@@ -2,17 +2,25 @@
     controllerName="logaligroup.com.sapui5.controller.App"
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
-    <App id="idApp">
-        <Page id="Page" title="My first App">
-            <Button id="idButton1" 
-                    text="{i18n>pressButton}" 
-                    press=".onPress"  /> 
-            <Input id="input" 
-                    value="{oDataModel>/recipient/name}"
-                    width="60%"
-                    valueLiveUpdate="true" />
-            <Text id="text" text="Hello {oDataModel>/recipient/name}"/> 
-        </Page>
-    </App>
+	xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+    <Shell id="idShell">
+        <App id="idApp">
+            <pages>
+                <Page id="Page" title="My first App">
+                    <headerContent>
+                        <Button id="helloDialogHeader"
+                                icon="sap-icon://action"
+                                press=".onOpenDialogHeader"
+                                class="sapUiSmallMarginEnd"/>
+                    </headerContent>                
+                    <content>
+                        <mvc:XMLView id="idHelloPanelView" viewName="logaligroup.com.sapui5.view.HelloPanel"/>
+                        <core:Fragment fragmentName="logaligroup.com.sapui5.view.Form01" type="XML"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>

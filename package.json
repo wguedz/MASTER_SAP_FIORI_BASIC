@@ -9,6 +9,7 @@
         "undeploy": "cf undeploy Invoices --delete-services --delete-service-keys --delete-service-brokers"
     },
     "devDependencies": {
+        "@sapui5/ts-types": "^1.96.13",
         "mbt": "^1.2.18",
         "rimraf": "^3.0.2"
     }
